@@ -27,7 +27,7 @@ class Tag_Sub(object):
 
     def euler_to_quaternion(self, euler):
         #オイラー角からクオータニオンへ変換する関数
-        quaternion = tf.transformations.quaternion_from_euler(euler)
+        quaternion = tf.transformations.quaternion_from_euler(euler[0], euler[1], euler[2])
         return quaternion
 
 
