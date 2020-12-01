@@ -72,7 +72,7 @@ class Tag_Sub(object):
             #クオータニオンの[0, 0, 0, 1]は0[rad]を意味する
             self.broadcaster([1, 0, 0], [0, 0, 0, 1], "cam_no_tonari", "tag0")
             
-            #usb_camと70行目で登録したcam_no_tonariという座標系の相対関係を取得↓
+            #usb_camと73行目で登録したcam_no_tonariという座標系の相対関係を取得↓
             tag0_cnt_t, tag0_cnt_r = self.listener("usb_cam", "cam_no_tonari")
             print(tag0_cnt_t)
             print(tag0_cnt_r)
