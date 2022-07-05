@@ -9,9 +9,10 @@ from apriltag_ros.msg import AprilTagDetectionArray
 
 class Tag_Sub(object):
     def __init__(self):
+        self.number_of_tags = 2
         self.tag_sub = rospy.Subscriber("/tag_detections", AprilTagDetectionArray, self.callback)
-        self.tag_xyz = np.zeros([2, 3], dtype = "float64")
-        self.tag_quaternion = np.zeros([2, 4], dtype = "float64")
+        self.tag_xyz = np.zeros([self.number_of_tags, 3], dtype = "float64")
+        self.tag_quaternion = np.zeros([self.number_of_tags, 4], dtype = "float64")
 
 
     def callback(self, message):
